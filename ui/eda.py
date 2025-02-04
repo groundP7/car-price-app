@@ -15,7 +15,7 @@ def run_eda() :
         st.write(df.describe())
 
     if st.checkbox("상관계수 데이터 분석") :
-        st.write(df.corr())
+        st.dataframe(df.corr(numeric_only=True))
 
     st.info("상관관계 분석")
     menu = ["차트로 보기", "수치로 보기"]
